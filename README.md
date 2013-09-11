@@ -8,8 +8,9 @@ Inspired from:
 
 How to:
 
-Put on your Activity
+Put on your Activity  
 
+```java
 	private SwipeDetector sd = new SwipeDetector(this, new SwipeDetector.OnSwipeListener() {
 
 		@Override
@@ -36,10 +37,13 @@ Put on your Activity
 			iv.setImageResource(R.drawable.down);
 		}
 	});
-	
+```	
+
 And set listener to
 
+```java
 	@Override
 	public boolean onTouchEvent(MotionEvent me) {
 		return sd.onTouch(null, me);
 	}
+```
