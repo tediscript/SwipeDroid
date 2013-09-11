@@ -10,7 +10,7 @@ How to:
 
 Put on your Activity
 
-	private SwipeDetector sd = new SwipeDetector(this, new SwipeListener() {
+	private SwipeDetector sd = new SwipeDetector(this, new SwipeDetector.OnSwipeListener() {
 
 		@Override
 		public void onSwipeUp(float distance, float velocity) {

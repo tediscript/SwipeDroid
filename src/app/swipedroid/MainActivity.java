@@ -1,12 +1,11 @@
 package app.swipedroid;
 
+import lib.gesture.SwipeDetector;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
-import app.gestures.SwipeDetector;
-import app.gestures.SwipeListener;
 
 public class MainActivity extends Activity {
 
@@ -22,7 +21,7 @@ public class MainActivity extends Activity {
 		tv = (TextView) findViewById(R.id.textView1);
 		iv = (ImageView) findViewById(R.id.imageView1);
 
-		sd = new SwipeDetector(this, new SwipeListener() {
+		sd = new SwipeDetector(this, new SwipeDetector.OnSwipeListener() {
 
 			@Override
 			public void onSwipeUp(float distance, float velocity) {

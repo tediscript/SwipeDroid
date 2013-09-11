@@ -1,4 +1,4 @@
-package app.gestures;
+package lib.gesture;
 
 // inspired from http://www.techrepublic.com/blog/android-app-builder/use-androids-gesture-detector-to-translate-a-swipe-into-an-event/
 
@@ -13,9 +13,9 @@ public class SwipeDetector extends SimpleOnGestureListener implements
 		OnTouchListener {
 
 	private GestureDetector gDetector;
-	private SwipeListener listener;
+	private OnSwipeListener listener;
 
-	public SwipeDetector(Context context, SwipeListener listener) {
+	public SwipeDetector(Context context, OnSwipeListener listener) {
 		gDetector = new GestureDetector(context, this);
 		this.listener = listener;
 	}
@@ -53,6 +53,18 @@ public class SwipeDetector extends SimpleOnGestureListener implements
 	@Override
 	public boolean onTouch(View v, MotionEvent event) {
 		return gDetector.onTouchEvent(event);
+	}
+
+	public static interface OnSwipeListener {
+
+		public void onSwipeUp(float distance, float velocity);
+
+		public void onSwipeDown(float distance, float velocity);
+
+		public void onSwipeLeft(float distance, float velocity);
+
+		public void onSwipeRight(float distance, float velocity);
+
 	}
 
 }
