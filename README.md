@@ -11,6 +11,7 @@ How to:
 Put on your Activity  
 
 ```java
+
 	private SwipeDetector sd = new SwipeDetector(this, new SwipeDetector.OnSwipeListener() {
 
 		@Override
@@ -42,8 +43,10 @@ Put on your Activity
 And set listener to
 
 ```java
-	@Override
-	public boolean onTouchEvent(MotionEvent me) {
-		return sd.onTouch(null, me);
-	}
+
+@Override
+public boolean onTouchEvent(MotionEvent me) {
+	return sd.onTouch(null, me);
+}
+	
 ```
