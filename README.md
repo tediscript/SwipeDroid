@@ -51,9 +51,6 @@ public boolean onTouchEvent(MotionEvent me) {
 Screenshot:
 
 ![image](https://raw.github.com/tediscript/SwipeDroid/master/screenshot1.png)
-
 ![image](https://raw.github.com/tediscript/SwipeDroid/master/screenshot2.png)
-
 ![image](https://raw.github.com/tediscript/SwipeDroid/master/screenshot3.png)
-
 ![image](https://raw.github.com/tediscript/SwipeDroid/master/screenshot4.png)
